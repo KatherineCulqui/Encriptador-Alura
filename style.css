@@ -1,0 +1,809 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    border: 3px solid white;
+    
+   }
+
+#body {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    background: url(imagenes/Background-juego-encriptador-Alura1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#alertas{
+    
+    margin: 10% 27%;
+    background: #ff0000d0;
+    color: #ffffff;
+    position: absolute;
+ 
+    justify-content: center;
+    align-items: center;
+
+    width: 90vmin;
+    box-sizing: border-box;
+    font-size: 3.25vmin;
+    padding: 1vmin 2vmin;
+    height: 60vmin;
+    box-shadow: 0 0 0 100vmin #ff000060, 0 0 0 5vmin #ff000060;
+    z-index: 5;
+    display: none;
+    text-align: center;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff;
+    animation: warning-ligth 1s 0s infinite;
+}
+
+.mensajeEncabezado{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 3vmin;
+    position: relative;
+    font-size: 6.5vmin;
+    width: 44vw;
+    z-index: 6;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+    border-bottom: 1vmin dotted #fff;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+
+}
+
+#alertas.show {
+    display: block !important;
+}
+
+
+
+.tipoAlerta{
+
+    margin: 5vmin auto 7vmin;
+    text-shadow: 0 0 2px #fff;
+    font-family: 'Share Tech Mono', monospace;
+
+}
+
+.cerrar{
+    background: #ffffffb8;
+    color: #d30303;
+    cursor: pointer;
+    padding: 1vmin 2.75vmin;
+    font-size: 4vmin;
+    border-radius: 1.25vmin;
+    font-weight: bold;
+    animation: highlight 1s 0s infinite;
+    font-size: 3vmin;
+}
+
+
+.cerrar:hover {
+  background: #ffffff;
+    box-shadow: 0 0 15px 5px #fff;
+}
+
+
+
+.cerrar:active{
+    color: #00b4cc;
+    box-shadow: 0 0 20px #25abd9;
+    cursor: pointer;
+    border: 1px solid #00dffc;
+}
+
+@keyframes highlight {
+    50% { box-shadow: 0 0 15px 5px #fff;}
+}
+
+.logo h1 a{
+  
+    display: inline-block;
+    overflow: hidden;
+   padding: 1.5em .54em .4em 1.7em;
+font-size: 2.2em;
+    color: white;
+    white-space: nowrap;
+    font-family: 'Press Start 2P', cursive;
+    text-decoration:none;
+    animation: typing 6s steps(75) 0.5s 1 normal both, blink 1s steps(75) 0.3s 1 normal both;
+}
+
+
+.logo h2 {
+
+    overflow: hidden;
+    padding: 0 .54em .45em 2.5em;
+    font-size: 1.5em;
+    color: white;
+    white-space: nowrap;
+    font-family: 'Share Tech Mono', monospace;
+    animation: typing 4.5s steps(50) 1.5s 1 normal both, blink 1s steps(50) 1.5s 1 normal both;
+}
+
+    @keyframes typing {
+      
+      from {
+        width: 0;
+        }
+
+      to {
+        width: 100%;
+        }
+    }
+    
+    @keyframes blink {
+      
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    }
+
+#secc-encriptado{
+
+    width: 55%;
+    float: left;
+    font-size: 20px;
+    margin-left: 3.2em;
+    margin: 0 1em;
+    flex-wrap:wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mensaje{
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 2em;
+    margin: 2.5em auto;
+    width: 90%;
+    height: 60%;
+    border: 4px solid white;
+    background:#00223f;
+    color: white;
+    box-shadow: 0 0 10px #a6ffff;
+    resize: none;
+    border-radius: 12px;
+    cursor: text;
+}
+
+#mensaje:focus{
+
+    outline: none;
+}
+
+::placeholder{
+
+    color:white;
+    opacity: 0.35;
+}
+
+p {
+
+    font-size: 1em;
+    font-family: 'Share Tech Mono', monospace;
+    color: white;
+    line-height: 1.5em;
+    padding-left: .3em;
+    box-sizing: border-box;
+    width: 90%; 
+}
+
+.botones{
+
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 49%;
+    height: 100%;
+    margin: 0 4.5em;
+    padding: 2em;
+    float: left;
+    clear: both;
+}
+
+.boton-accion{
+
+	box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: .8em;
+    text-align: center;
+    padding: 4%;
+    width: 40%;
+    height: 60%;
+    background: #00223f;
+    margin-left: 1em;
+    margin-right: 3em;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #a6ffff;
+    border-radius: 12px;
+    letter-spacing: 3px;
+    transition: box-shadow 1s, text-shadow 1s, color 1s, border 1s;
+    transition-timing-function: ease;
+}
+
+
+.boton-accion:hover {
+  
+    color:white;
+    text-shadow:  0px 0px 2px #a6ffff, 0px 0px 1px #a6ffff;
+    border: 3px solid #a6ffff;
+    box-shadow: 0px 0px 14px #a6ffff, 0px 0px 9px #a6ffff, inset 0px 0px 7px #a6ffff, inset 0px 0px 5px #a6ffff;
+    scale: 1.02;
+    background: transparent;
+  
+  }
+
+
+.boton-accion:active {
+
+    
+   border:3px solid #a6ffff;
+   color: #a6ffff;;
+
+}
+
+.boton-especial {
+
+	margin: 0;
+    margin-left: 2vmin;
+	box-sizing: border-box;
+  	display: flex;
+  	border-radius: 50%;
+  	justify-content: center;
+ 	align-items: center;
+  	background: transparent;
+  	border: 3px solid white;
+  	font-family: 'Press Start 2P', cursive;
+  	font-size: .85em;
+  	color: white;
+
+}
+
+.frente-especial{
+
+  	position: relative;
+	width: 137px;
+  	height: 137px;
+  	border-radius: 50%;
+  	line-height: 140px;
+  	text-align: center;
+  	background:  #00223f;
+  	transform: translateY(-10px);
+  	will-change: transform;
+    transition: transform 100ms;
+    border: 3px solid white;
+    box-shadow: 0 0 10px #a6ffff;
+
+	}
+
+.boton-especial::before {
+  	display: block;
+  	position: absolute;
+  	margin-top: -24px;
+  	width: 160px;
+  	height: 160px;
+ 	border-radius: 50%;
+  	background: white;
+  	opacity: 0;
+  	content: '';
+  	animation: pulse 1s infinite;
+ 
+}
+ 
+.boton-especial:active .frente-especial {
+
+	transform: translateY(-2px);
+    color:white;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+    background: #D21404;
+    border: 3px solid   #B90E0A;
+    box-shadow: 0 0 10px red;
+}
+
+
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+    opacity: .4;
+  }
+  to {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+#secc-resultado{
+
+	width: 45%;	
+	float: right;
+	font-size: 20px;
+    flex-wrap:wrap;
+    display: inline-flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#verMensajeEnPantalla {
+
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9em;
+    line-height: 1.5em;
+    padding: 2em;
+    margin: 2.5em auto;
+    width: 30vw;
+    height: 65vh;
+    border: 4px solid white;
+    background:#00223f;
+    color: white;
+    box-shadow: 0 0 10px #a6ffff;
+    resize: none;
+    border-radius: 12px;
+    
+}
+
+#verMensajeEnPantalla:focus{
+
+    outline: none;
+}
+
+#textoTemporal{
+
+    box-sizing: border-box;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 40% auto;
+    align-items: center;
+}
+
+img{
+    width: 30%;
+    position: absolute;
+    margin-top: -37%;
+    filter: invert(2);
+
+}
+
+#textos{
+
+    margin: 0 1em;
+    text-align: center;
+}
+
+h3{
+
+    margin-bottom: 1em;
+    line-height: 1.3em;
+}
+
+p#textos{
+
+    line-height: 1.5em;
+}
+
+P#pantallaResultado{
+
+    padding-left:3.2vmin;
+}
+
+#btnCopiar.boton-accion{
+
+    display: none;
+    position: relative;
+    margin-top: -27%;
+    width: 30%;
+    margin-left: 2em;
+}
+
+.pie{
+    
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    bottom: 4vmin;
+    width: 70%;
+    margin-left: 26%;
+}
+
+.items {
+
+    margin: 0 2vmin;
+    padding: 0 2vmin;
+
+}
+
+.items img{
+    
+    margin: -2vmin 0vmin 0;
+    height: 3vmin;
+    width: 3vmin;
+}
+
+.items p {
+
+    width: 100%;
+}
+
+
+/* ----------> Aqui comienza @media 768PX <--------------*/
+
+@media screen and (max-width:768px){
+
+#alertas{
+    
+    margin: 36% 27%;
+    width: 40vmin;
+    height: 50vmin;
+
+}
+
+.mensajeEncabezado{
+
+    font-size: 2.5vmin;
+    width: 30vw;
+    z-index: 6;
+ 
+ }
+
+.tipoAlerta{
+
+    font-size: 0.8em;
+
+}
+
+
+.cerrar{
+
+    font-size: 2vmin;
+}
+
+.logo h1 a{
+
+ padding: 1.7em .54em .4em 2.5em;
+    font-size: 1.5em;
+        
+    }
+
+.logo h2{
+    
+    padding: 0 .1em .45em 3em;
+    font-size: 1.2em;
+    }
+
+#secc-encriptado{
+
+    width: 90%;
+    float: none;
+    margin: -1vmin 5vmin 0;
+  
+}
+
+#mensajeAlerta{
+    margin-top: -2vmin;
+}
+
+.botones{
+
+    width: 79%;
+    margin-top: -2vmin;
+
+}
+
+.boton-accion{
+
+    font-size: .7em;
+    text-align: center;
+    padding: 4% 4% 3% 4%;
+    width: 43%;
+    margin-right: 2em; 
+}
+
+.boton-especial {
+
+    font-size: .7em;
+
+}
+
+.frente-especial{
+
+    position: relative;
+    width: 110px;
+    height: 110px;
+    line-height: 118px; 
+}
+
+.boton-especial::before {
+ 
+    width: 120px;
+    height: 120px;
+   
+}
+
+.boton-especial:active .frente-especial {
+
+    transform: translateY(-2px);
+    color:white;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff;
+    background: #D21404;
+    border: 3px solid   #B90E0A;
+    box-shadow: 0 0 10px red;
+}
+
+#secc-resultado{
+
+    width: 89%; 
+    margin: 0 auto;
+    display: flex;
+    float: none;
+    margin: 25vmin 0 0 4vmin;
+}
+
+#verMensajeEnPantalla {
+ 
+    font-size: 0.9em;
+    margin: 0 6.5%; 
+    width: 90%;
+    height: 40vmin;
+    clear: both;
+    
+}
+
+#textoTemporal{
+
+    margin: 20% 40% 8%;
+}
+
+img{
+    width: 20%;
+    margin-top: -25%;
+}
+
+#textos {
+    margin: 0 -3em;
+}
+
+h3 {
+    font-size: .8em;
+    margin-bottom: .7em;
+    line-height: 1.3em;
+}
+
+P#pantallaResultado {
+    padding-left: 7vmin;
+    font-size: 0.8em;
+
+}
+
+#btnCopiar.boton-accion{
+
+    margin-top: -13%;
+    width: 19%;
+    margin-left: 1em;
+    padding: 2%;
+ }
+
+.pie{
+    width: 59%;
+    margin-left: 18%;
+    position: absolute;
+    margin-bottom: -28vmin;
+}
+
+.items {
+    margin: -15px 2vmin;
+}
+
+}
+
+@media (hover: hover) {
+   .boton-accion:hover {
+  
+    color:white;
+    text-shadow:  0px 0px 2px #a6ffff, 0px 0px 1px #a6ffff;
+    border: 3px solid #a6ffff;
+    box-shadow: 0px 0px 14px #a6ffff, 0px 0px 9px #a6ffff, inset 0px 0px 7px #a6ffff, inset 0px 0px 5px #a6ffff;
+    scale: 1.02;
+    background: transparent;
+  }
+
+  }
+
+/* ----------> Aqui comienza @media 375PX <--------------*/
+
+@media screen and (max-width:375px){
+
+#alertas{
+    
+    margin: 73% 29%;
+    width: 50vmin;
+    height: 50vmin;
+}
+
+.mensajeEncabezado{
+
+    font-size: 3.3vmin;
+    width: 37vw;
+
+ }
+
+.tipoAlerta{
+
+    font-size: 0.99em;
+}
+
+.cerrar{
+
+    font-size: 2.5vmin;
+}
+
+.logo h1 a{
+
+ padding: 2em .54em .4em 1.5em;
+    font-size: 1.3em;
+        
+    }
+
+.logo h2{
+    
+    padding: 0 .1em .45em 2em;
+    font-size: 1em;
+    }
+
+#secc-encriptado{
+
+    float: none;
+    margin: -2vmin 5vmin 0;
+  
+}
+
+#mensaje{
+    font-size:.6em ;
+    line-height: 1.3em;
+}
+
+#mensajeAlerta{
+    margin-top: -2vmin;
+    font-size: .65em;
+    line-height: 1.3em;
+}
+
+.botones{
+    width: 70%;
+    margin-top: -3vmin;
+    display: flow-root;
+    margin-left: 15%;
+}
+
+.boton-accion {
+    font-size: .6em;
+    width: 100%;
+    height: 100%;
+    margin: 2.5vmin -4.5vmin 0 0;
+    padding: 2.5vmin 0;
+}
+
+.boton-especial {
+    font-size: .6em;
+    border: none;
+}
+
+.frente-especial {
+    position: relative;
+    width: 193px;
+    height: 28px;
+    line-height: 30px;
+    border-radius: 12px;
+    margin: 5vmin 0 -5vmin -2vmin;
+}
+
+.boton-especial::before {
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 4vmin;
+}
+
+#secc-resultado{
+
+    width: 89%; 
+    display: flex;
+    float: none;
+    margin: 0 0 0 4vmin;
+    border-radius: 12px;
+    position: relative;
+}
+
+#verMensajeEnPantalla {
+ 
+    font-size: .6em;
+    margin: 2% 6.5%; 
+    width: 90%;
+    height: 40vmin;
+    clear: both; 
+}
+
+#btnCopiar.boton-accion{
+
+    margin-top: -17%;
+    width: 32%;
+    margin-left: -1em;
+    padding: 2%;
+ }
+
+#textoTemporal{
+
+    margin: 15% 40% 0%;
+}
+
+#candado{
+    display: none;
+}
+
+#textos {
+    margin: 0 -2em;
+}
+
+h3 {
+    font-size: .55em;
+    margin-bottom: .5em;
+    line-height: 1.4em;
+}
+
+P#pantallaResultado {
+    padding-left: 7vmin;
+    font-size: 0.6em;
+    line-height: 1.2em;
+
+} 
+
+.pie{
+    width: 69%;
+    margin-left: 13%;
+    position: absolute;
+    margin-bottom: -28vmin;
+}
+
+.items {
+
+    margin: 0 2vmin;
+    padding: 0 2vmin;
+
+}
+
+.items img a{
+   
+    margin: -2vmin 0vmin 0;
+    height: 3vmin;
+    width: 3vmin;
+}
+
+.items p{
+    width: 100%;
+    font-size: .8em;
+}
+
+}
