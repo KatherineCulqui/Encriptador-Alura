@@ -8,7 +8,7 @@ var btnDestruido = document.getElementById("btnDestruir");
 
 // Sonido en botones
 
-const audio = new Audio("G:/Programacion-ONE-Alura/Proyecto-Alura/Challenge-ONE-Principiante-en-programacion/audios/boton-bomba-juego-encriptador-Alura.mp3");
+const audio = new Audio("C:/Users/celeb/OneDrive/Escritorio/Kata Octubre 2022/Encriptador-Alura/audios/boton-bomba-juego-encriptador-Alura.mp3");
 const buttons = document.querySelectorAll("button");
 
 buttons.forEach(button => {
