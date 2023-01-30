@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+
+		<meta charset="utf-8">
+		 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width initial-scale=1">
+		<title>Encriptador Alura</title>
+		<link rel="icon" href="imagenes/candado-juego-encriptador.png">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+	</head>
+
+	<body id="body">
+			<div id="pagina">
+
+		<!-- Notificaciones de alerta  -->
+
+
+				<div id="alertas" >
+		            <div class="cajaMensaje">
+		
+		                  <p class="mensajeEncabezado">ADVERTENCIA</p>
+		              
+		                <p class="tipoAlerta"></p>
+		               
+		                <button class="cerrar">
+		                    cerrar
+		                </button>
+
+		                <audio id="alarma" src="audios/timer-bomba-juego-encriptador-Alura.mp3" visibility="hidden"></audio>
+		            </div>
+        
+        		</div>
+
+		<!-- H1 y H2 forman el logo  -->
+
+				<div class="logo">
+						
+					<h1><a href="https://www.aluracursos.com/">Alura</a></h1>
+					<h2>Encriptador de texto</h2>
+
+				</div>
+
+		<!-- Casilla de encriptado  -->
+
+
+				<div id="secc-encriptado">
+		
+					<textarea cols="45" rows="8" id="mensaje" placeholder="Digita tu mensaje aquí" autofocus ></textarea>
+
+					<p id="mensajeAlerta">¡CUIDADO!<br> Evita las mayúsculas, acentos y caracteres especiales en tu mensaje</p>
+
+				</div>
+
+			<!-- Botones de texto -->
+
+					<div class="botones">
+
+						<button id="btnEncriptar" class="boton-accion" onclick="validarE()
+							">ENCRIPTAR</button>
+
+						<button id="btnDesencriptar" class="boton-accion" onclick="validarD()">DESENCRIPTAR</button>
+
+						<button  id ="btnDestruir" class="boton-especial"onclick="destruirMensaje()"><span class="frente-especial">DESTRUIR</span></button>
+
+					</div>	
+
+		<!-- Casilla de resultado  -->
+
+				<div id="secc-resultado">
+
+					<textarea id="verMensajeEnPantalla" cols="45" rows="9" readonly="readonly"></textarea>
+
+					<div id="textoTemporal">
+
+						<img id="candado" src="imagenes/candado-juego-encriptador.png" alt="imagen candado juego encriptador Alura">
+
+						<div class="textos" id="textos">
+	               	
+	                		<h3><strong>Ningun mensaje fue encontrado</strong></h3>
+	              		 	<p id="pantallaResultado">Ingresa el mensaje que desees encriptar o desencriptar</p>
+	            			
+	            		</div>
+			
+
+						<!-- Boton de copiar -->
+
+					</div>
+
+					<button   id ="btnCopiar" class="boton-accion" onclick="copiarAlPortapapeles()">Copiar</button>
+			
+				</div>	
+
+		</div>
+
+		<footer id="footer">
+
+			<div class="pie">
+
+			<!-- Datos del creador -->
+			
+				<div class="items">
+					<a href="https://www.linkedin.com/in/katherine-culqui/"><img src="imagenes/linkedin-logo.png" alt="linkedin"></a>
+				</div>
+
+				<div class="items">
+		        	<a href="https://github.com/KatherineCulqui"><img src="imagenes/github-logo.png" alt="github"></a>
+	            </div>
+
+	            <div class="items">
+	            	<p>&copy; 2023 KATHERINE CULQUI </p>
+	            </div>
+
+        	</div>
+			
+		</footer>
+
+		<script src="funciones.js"></script>
+
+	</body>
+	</html>
