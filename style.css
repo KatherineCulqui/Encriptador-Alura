@@ -784,7 +784,7 @@ P#pantallaResultado {
     width: 69%;
     margin-left: 13%;
     position: absolute;
-    margin-bottom: 14vmin;
+    margin-bottom: -10vmin;
 }
 
 .items {
