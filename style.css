@@ -632,9 +632,9 @@ P#pantallaResultado {
 
   }
 
-/* ----------> Aqui comienza @media 375PX <--------------*/
+/* ----------> Aqui comienza @media 412X <--------------*/
 
-@media screen and (max-width:375px){
+@media screen and (max-width:412px){
 
 #alertas{
     
